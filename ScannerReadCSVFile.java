@@ -23,7 +23,22 @@ public class ScannerReadCSVFile
         while (scanner.hasNext()) {
             // Read the next line of the file
             String line = scanner.nextLine();
-            System.out.println(line);
+            String[] strArray = line.split(",");
+            int c = 0;
+            String sect = "";
+            for (int i=0; i<strArray.length; i++) {
+                if (i == 0) {
+                    sect = strArray[0];
+                } 
+                //else {
+                    //int[] numberArray = new int [strArray.length];
+                    //for (int r = 0; r < numberArray.length; r++) {
+                        //numberArray[i] = Integer.parseInt(strArray);
+                    //}
+                //}
+                }
+                System.out.println (sect + c);
+            }
 
             // line now contains a line of comma-separated numbers
             // representing 10 test scores for each class.
@@ -51,7 +66,6 @@ public class ScannerReadCSVFile
             
             
         }
-    }
 
     public static void main (String[] args) {
         try {

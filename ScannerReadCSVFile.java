@@ -30,15 +30,11 @@ public class ScannerReadCSVFile
                 if (i == 0) {
                     sect = strArray[0];
                 } else {
-                    int[] numberArray = new int [strArray.length];
-                    for (int r = 1; r < numberArray.length; r++) {
-                        numberArray[i] = Integer.parseInt(strArray [i]);
-                        sum += numberArray[i];
-                    }
+                    int b = Integer.parseInt(strArray[i]);
+                    sum = sum + b;
                 }
             }
-            int average = (sum/10);
-            System.out.println (sect + " " + average);
+            System.out.println (sect + " " + sum/10);
         }
 
             // line now contains a line of comma-separated numbers

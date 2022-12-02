@@ -30,8 +30,8 @@ public class ScannerReadCSVFile
                 if (i == 0) {
                     sect = strArray[0];
                 } else {
-                    int b = Integer.parseInt(strArray[i]);
-                    sum = sum + b;
+                    int numberArray = Integer.parseInt(strArray[i]);
+                    sum = sum + numberArray;
                 }
             }
             System.out.println (sect + " " + sum/10);
